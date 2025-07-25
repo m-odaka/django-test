@@ -2,7 +2,7 @@
 
 ![](imgs/screenshot.png)
 
-### ローカルで動作させる場合
+## ローカルで動作させる場合
 1. myproject/settings.pyの設定を変更
 ```python
 DEBUG = True
