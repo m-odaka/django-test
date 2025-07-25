@@ -6,6 +6,19 @@
 </head>
 <body>
     <h1>Django App on Azure Web App</h1>
-    <p>The current time: {{ now }}</p>
+    <button id="time-btn">現在時刻を取得</button>
+    <p id="time"></p>
+
+    <script>
+        document.getElementById("time-btn")
+            .addEventListener("click", () => {
+                fetch("{% url 'current_time' %}")
+                    .then(res => res.json())
+                    .then(data => {
+                        document.getElementById("time").textContent = data.now;
+                    })
+                    .catch(err => console.error(err));
+            });
+    </script>
 </body>
 </html>
