@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+*.splite3
+/staticfiles/
+.env
